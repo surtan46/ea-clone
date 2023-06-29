@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #dedede;
+}
+
+header .dark-header {
+  background-color: black;
+  padding: 8px 50px;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+header .dark-header img {
+  height: 23px;
+}
+
+header .main-nav {
+  display: flex;
+  padding: 16px 20px;
+  gap: 30px;
+}
+header .main-nav .humbugger-menu {
+  display: flex;
+  flex-direction: column;
+}
+header .main-nav .humbugger-menu:hover {
+  transform: scale(1.3);
+  transition: transform 300ms ease-in-out;
+}
+header .main-nav .humbugger-menu:hover span {
+  background-color: #da292a;
+}
+header .main-nav .humbugger-menu span {
+  transition: all 300ms ease-in-out;
+  background-color: black;
+  display: block;
+  margin: 2px;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+header .main-nav .main-logo {
+  height: 23px;
+}
+header .main-nav .nav-list {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  top: 100%;
+}
+
+header .main-nav .nav-list .sub-nav {
+  display: none;
+  animation: slidedown 500ms ease 0s 1 normal forwards;
+  position: absolute;
+  top: 200%;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+header .main-nav .nav-list .sub-nav .hover {
+  display: block;
+}
+header .main-nav .nav-list .sub-nav a {
+  display: block;
+  color: rgb(39, 41, 36);
+  text-decoration: none;
+  margin: 7px 0;
+}
+header .main-nav .nav-list .sub-nav-heading {
+  padding-right: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+header .main-nav .nav-list .sub-nav-heading:hover {
+  color: #da292a;
+  cursor: pointer;
+}
+header .main-nav .nav-list .sub-nav-heading:hover + .sub-nav {
+  display: block;
+}
+/*animation:animation 1s ease os 1 normal fowards; */
+
+/*hero section*/
+.hero {
+  position: relative;
+}
+.hero .hero-img-desktop {
+  width: 100%;
+}
+.hero .hero-img-mobile {
+  display: none;
+  width: 100%;
+}
+.hero .hero-text {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  right: 50%;
+  text-align: center;
+  color: white;
+}
+.hero .hero-text h1 {
+  font-size: 40px;
+}
+.hero .hero-text p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.hero .hero-text a {
+  font-size: 20px;
+  padding: 17px 20px;
+  background-color: #da292a;
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0%;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+    display: block;
+  }
+}
+
+/*featured games section */
+
+.featured > h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.featured .games {
+  display: flex;
+  flex-wrap: wrap;
+}
+.featured .games > a {
+  width: 45%;
+  height: 250px;
+  margin: 10px;
+  display: block;
+  background-image: url(./images/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+.featured .games > #game-box-a {
+  background-image: url(./images/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
+}
+.featured .games .game {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.featured .games .game img {
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(18px);
+}
+.featured .games .game p {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: none;
+}
+.featured .games .game:hover {
+  background: linear-gradient(
+    to right,
+    rgba(7, 1, 108, 0.8),
+    rgba(174, 23, 23, 0.6)
+  );
+}
+.featured .games .game:hover p {
+  display: block;
+}
+.featured .games .game:hover img {
+  transform: translateY(-27px);
+}
+
+/* updates section */
+
+.updates > h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.updates .update-nav {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0 80px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.updates .update-nav a {
+  text-decoration: none;
+  padding: 16px 20px;
+  display: block;
+  color: rgb(38, 35, 35);
+}
+.updates .update-nav a:hover {
+  background-color: #d3d3d3;
+  border-bottom: 2px solid peru;
+}
+.updates .updates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 80px;
+}
+.updates .updates-container .update {
+  width: 45%;
+  background-color: white;
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
+  transition: all o.3s ease;
+}
+.updates .updates-container .update:hover {
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
+  transform: translateY(-14px);
+}
+.updates .updates-container .update > img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+}
+.updates .updates-container .update-text {
+  padding: 16px 20px;
+  line-height: 25px;
+}
+.updates .updates-container .update .update-text p:nth-child(1) {
+  color: #da292a;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.updates .updates-container .update .update-text p:nth-child(1) span {
+  color: black;
+}
+.updates .updates-container .update .update-text h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+/*relative units--%,rem ,em--assigment*/
+
+.read-more {
+  box-sizing: border-box;
+  align-items: center;
+  color: rgb(22, 22, 22);
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 530px;
+  border: 5px solid black;
+  width: 500px;
+}
+.cta .main-cta-text {
+  background-image: url(./images/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 0 80px;
+}
+.cta .main-cta-text p {
+  line-height: 30px;
+  max-width: 50%;
+}
+.cta .main-cta-text img {
+  height: 100px;
+  align-self: flex-start;
+}
+.cta .main-cta-text .read-more a {
+  color: white;
+  border-color: white;
+}
+
+.cta .additional-text {
+  display: flex;
+  background-color: aqua;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+.cta .additional-text p {
+  font-size: 25px;
+  font-weight: bold;
+  max-width: 50%;
+}
+.cta .additional-text .read-more {
+  padding: 20px;
+}
+
+/*footer*/
+
+footer .quick-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: lightgray;
+}
+footer .quick-links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+footer .quick-links ul:last-child {
+  flex-wrap: wrap;
+}
+footer .quick-links ul:last-child h4 {
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+footer .footer-text img {
+  width: 50px;
+}
+footer .footer-text .language {
+  margin-left: auto;
+}
+
+/* desktop first /*
+
+/* these styles in the media query below will apply to screens below 1020px(screens whose max width is 1020px)*/
+
+@media screen and (max-width: 1020px) {
+  header .main-nav .nav-list {
+    display: none;
+  }
+  header .main-nav .humbugger-menu span {
+    width: 25px;
+    border-radius: 3px;
+    height: 3px;
+    margin: 3px;
+  }
+  .hero .hero-text {
+    top: 20%;
+  }
+  .updates .updates-container .update {
+    width: 45%;
+  }
+  .updates .update-nav {
+    flex-wrap: ;
+  }
+  footer .quick-links,
+  footer .footer-text {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero .hero-img-desktop {
+    display: none;
+  }
+
+  .cta .main-cta-text {
+    padding: 0 20px;
+  }
+  .updates .update-nav {
+    padding: 0 20px;
+  }
+  .updates .updates-container {
+    padding: 0 20px;
+  }
+  .cta .additional-text {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  .cta .additional-text {
+    padding: 0 20px;
+  }
+  .cta .main-cta-text p {
+    max-width: unset;
+  }
+  .featured .games {
+    padding: 0 20px;
+  }
+  footer .quick-links {
+    padding: 20px;
+  }
+  .hero .hero-img-mobile {
+    display: block;
+    width: 100%;
+  }
+  .hero .hero-text {
+    top: unset;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(70, 167, 223);
+    padding: 40px;
+  }
+  .hero .hero-text h1 {
+    font-size: 25px;
+  }
+  .hero .hero-text p {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+  .hero .hero-text a {
+    padding: 8px 11px;
+  }
+  .featured .games > a {
+    width: 95%;
+  }
+
+  .updates .updates-container .update {
+    width: 95%;
+  }
+  footer .quick-links {
+    padding: 20px;
+  }
+  footer .quick-links ul {
+    flex-wrap: wrap;
+  }
+  footer .footer-text {
+    padding: 20px;
+  }
+}
