@@ -43,6 +43,7 @@ header .main-nav .humbugger-menu span {
   height: 5px;
   width: 5px;
   border-radius: 50%;
+  animation: slide-in-left 0.5s ease-in-out both;
 }
 header .main-nav .main-logo {
   height: 23px;
@@ -85,6 +86,42 @@ header .main-nav .nav-list .sub-nav-heading:hover + .sub-nav {
   display: block;
 }
 /*animation:animation 1s ease os 1 normal fowards; */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.mobile-nav .nav-list {
+  width: 500px;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 20px;
+  animation: slide-in-left 0.5s ease-in-out both;
+}
+/* .close-buttton {
+  background: transparent;
+  width: max-content;
+} */
+.close-buttton {
+  justify-self: flex-end;
+  width: 50px;
+}
+.close-buttton ion-icon {
+  font-size: 30px;
+  /*position: fixed;
+  top: 0;
+  right: 0;
+  */
+  padding: 20px 20px;
+}
 
 /*hero section*/
 .hero {
@@ -365,7 +402,7 @@ footer .footer-text .language {
     width: 45%;
   }
   .updates .update-nav {
-    flex-wrap: ;
+    flex-wrap: wrap;
   }
   footer .quick-links,
   footer .footer-text {
